@@ -1,0 +1,21 @@
+import React, { useState } from "react";
+
+const App = () => {
+  const [meters, setMeters] = useState();
+  const [centemeters, setCentemeters] = useState();
+
+  const metersMethod = (e) => {
+    console.log("meters", e);
+    setMeters(e.target.value);
+    setCentemeters(e.target.value / 0.01);
+  };
+
+  return (
+    <div>
+      Meters: <input type="number" value={meters} onChange={metersMethod} />
+      Centemeters: <input type="number" value={centemeters} />
+    </div>
+  );
+};
+
+export default App;
