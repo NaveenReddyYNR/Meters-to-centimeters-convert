@@ -5,7 +5,6 @@ const App = () => {
   const [centemeters, setCentemeters] = useState();
 
   const metersMethod = (e) => {
-    console.log("meters", e);
     setMeters(e.target.value);
     setCentemeters(e.target.value / 0.01);
   };
